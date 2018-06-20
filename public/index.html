@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Shadows+Into+Light&amp;subset=korean" rel="stylesheet">
+    <title>Morpion | Fabio Ferreira Soares</title>
+</head>
+<body>
+    
+    <div class="container">
+        <section id="home" class="home">
+            <h1>Morpion | Game</h1>
+            <div class="home-main">
+                <div class="ui-main">
+                    <h2>Nouvelle partie</h2>
+                    <hr>            
+                    <input type="text" name="name" id="input_player_1" placeholder="Enter your name" required>
+                    <button id="btn_new">Créer</button>				
+                </div>  
+                <div id="join_section" class="ui-main off">
+                        <h2>Joindre à une partie</h2>
+                        <hr> 
+                        <input type="text" name="name" id="input_player_2" class="input_join" placeholder="Enter your name" required>
+                        <h3>Rooms</h3>
+                        <div id="rooms" class="ui-rooms">
+                                                        
+                        </div>
+                </div>
+            </div>                        
+        </section>
+       <section id="board" class="main-board off">
+           <div class="main-txt">
+                <h2 id="player_name"></h2>
+                <h3 id="turn"></h3>
+           </div>          
+           <div class="main-table">
+                <div class="table">
+                        <div class="square" id="btn_1"></div>
+                        <div class="square" id="btn_2"></div>
+                        <div class="square" id="btn_3"></div>
+                        <div class="square" id="btn_4"></div>
+                        <div class="square" id="btn_5"></div>
+                        <div class="square" id="btn_6"></div>
+                        <div class="square" id="btn_7"></div>
+                        <div class="square" id="btn_8"></div>
+                        <div class="square" id="btn_9"></div>
+                    </div>
+           </div>           
+           <div id="pop_end" class="pop_up off">
+           		<div class="pop">
+                    <div class="main-pop">
+                        <p id="message_end"></p>
+           			    <div id="btn_restart" class="btn">Recommencer</div>
+                    </div>           			
+          		</div>
+           </div>
+       </section>        
+    </div>
+</body>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script src="js/Player.js"></script>
+<script src="js/Game.js"></script>
+<script src="js/main.js"></script>
+</html>
